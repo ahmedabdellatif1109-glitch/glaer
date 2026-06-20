@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Quote } from 'lucide-react'
 
 export default function About() {
   return (
@@ -62,11 +61,6 @@ export default function About() {
             </h2>
 
             <div className="relative mb-8">
-              <Quote
-                size={32}
-                className="text-red-600/30 absolute -top-2 -left-1 rotate-180"
-                fill="currentColor"
-              />
               <div className="space-y-5 text-zinc-500 leading-relaxed pl-6 border-l-2 border-zinc-200">
                 <p>
                   I started out just like you — hauling equipment, fighting with tangled

@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center group">
-          <img src="/glaer-logo.webp" alt="GLAER" className="h-8 w-auto object-contain" />
+          <img src={`${import.meta.env.BASE_URL}glaer-logo.webp`} alt="GLAER" className="h-8 w-auto object-contain" />
         </a>
 
         {/* Desktop Nav */}

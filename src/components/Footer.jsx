@@ -35,7 +35,7 @@ export default function Footer() {
             <a href="#home" className="flex items-center mb-5">
               {/* Logo inverted on dark footer */}
               <img
-                src="/glaer-logo.webp"
+                src={`${import.meta.env.BASE_URL}glaer-logo.webp`}
                 alt="GLAER"
                 className="h-7 w-auto object-contain"
                 style={{ filter: 'invert(1) hue-rotate(180deg)', mixBlendMode: 'screen' }}
