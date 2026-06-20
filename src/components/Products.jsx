@@ -11,7 +11,7 @@ const variants = {
     tagline: 'Everything you need, right out of the box.',
     badge: 'Most Popular',
     price: 0,
-    variant: '30ft pole · Hybrid brush · 100ft hose',
+    variant: '30ft pole · Hybrid brush · 50ft hose',
     image: 'https://xeroproducts.com/cdn/shop/files/The-Best-Line-Of-Water-Fed-Poles_Large_d79a9f5f-d656-42b8-be03-315d5905094b_1280x853.jpg',
     thumbnails: [
       'https://xeroproducts.com/cdn/shop/files/Hose-Home-Page-Block-2025_1280x960.jpg',
@@ -20,18 +20,18 @@ const variants = {
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
       { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
-      { label: 'Hose', value: "100'", sub: 'Supply hose included' },
+      { label: 'Hose', value: "50'", sub: '8mm supply hose included' },
       { label: 'Brush', value: 'Hybrid', sub: 'Agitate & rinse' },
     ],
     features: [
       '30ft high-modulus carbon fibre pole',
       'Hybrid brush — agitates and rinses in one pass',
-      "100' supply hose, ready to connect",
+      "50' 8mm supply hose, ready to connect",
       '2.4 lb bare weight — less arm fatigue on long routes',
       'All fittings included, no extra purchases needed',
       'Unbox it, connect it, get to work',
     ],
-    description: 'The Pro Bundle is our complete, job-ready setup. Everything ships together — pole, hybrid brush, and 100 feet of supply hose — so you can unbox it, connect it, and start cleaning the same day. Built for window cleaners who want professional performance without the hassle of sourcing components separately.',
+    description: 'The Pro Bundle is our complete, job-ready setup. Everything ships together — pole, hybrid brush, and 50 feet of 8mm supply hose — so you can unbox it, connect it, and start cleaning the same day. Built for window cleaners who want professional performance without the hassle of sourcing components separately.',
     shopifyVariantId: null,
   },
   unrigged: {
