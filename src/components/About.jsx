@@ -63,27 +63,32 @@ export default function About() {
             <div className="relative mb-8">
               <div className="space-y-5 text-zinc-500 leading-relaxed pl-6 border-l-2 border-zinc-200">
                 <p>
-                  I started out just like you — hauling equipment, fighting with tangled
-                  hoses, and wincing every time a component gave out after just a few months.
-                  I'd spent years cleaning windows the hard way, and when I finally made the
-                  switch to water-fed poles, I was genuinely shocked by what the market looked like.
+                  I started out just like you, cleaning windows the traditional way before making
+                  the switch to water-fed poles. Years on the job taught me what actually matters
+                  in this work: gear that performs consistently, day after day, without slowing you
+                  down or costing you a callback.
                 </p>
                 <p>
-                  The quality gear cost a small fortune. The affordable stuff let you down
-                  when it mattered most. There was no middle ground, and I was tired of handing
-                  over serious money to companies that seemed more invested in their branding than
-                  what was actually at the end of the pole.
+                  But what I found in the market was a clear gap. Premium systems delivered the
+                  reliability, but at a price that didn't make sense for most working crews.
+                  Mid-tier and budget options cut corners in ways that weren't always obvious until
+                  a brush head failed mid-job or a fitting gave out under pressure. There wasn't a
+                  real option built specifically for window cleaners who needed dependable equipment
+                  without the inflated markup.
                 </p>
                 <p>
-                  After one too many seasons patching things together and watching my margins
-                  get eaten by equipment costs, I decided enough was enough.{' '}
-                  <span className="text-black font-semibold">GLAER was built from that frustration</span>{' '}
-                  — a company designed from the ground up to give window cleaners
-                  professional-grade water-fed pole systems without the inflated price tag.
+                  That gap is why we started GLAER. Every component we offer goes through testing
+                  under actual working conditions, not just lab specs, because that's the standard
+                  that matters when you're on a ladder with a client watching. We sourced directly
+                  from manufacturers who could match that standard, cutting out the layers of markup
+                  that drive up cost without improving performance.
                 </p>
                 <p>
-                  Every package we put together, we build thinking about the person at the
-                  other end of that pole. Because we've been there. We still are.
+                  The result is professional-grade carbon fiber systems built to hold up to daily
+                  commercial use, priced for crews who run this as a business, not a hobby.{' '}
+                  <span className="text-black font-semibold">We built GLAER because we believe
+                  window cleaners deserve gear that's engineered to last, backed by real testing,
+                  and priced like the essential business tool it actually is.</span>
                 </p>
               </div>
             </div>
