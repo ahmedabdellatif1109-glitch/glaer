@@ -48,7 +48,7 @@ const variants = {
       { label: 'Reach', value: "30'", sub: 'Full extension' },
       { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
       { label: 'Sections', value: '4', sub: 'Telescopic carbon' },
-      { label: 'Hose', value: 'None', sub: 'Sold separately' },
+      { label: 'Material', value: 'CF', sub: 'High-modulus carbon' },
     ],
     features: [
       '30ft high-modulus carbon fibre pole',
