@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import Features from './components/Features'
+import Categories from './components/Categories'
 import Products from './components/Products'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -19,6 +20,7 @@ export default function App() {
         <WelcomePopup />
         <main>
           <Hero />
+          <Categories />
           <Stats />
           <Features />
           <Products />
