@@ -8,6 +8,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CartDrawer from './components/CartDrawer'
+import WelcomePopup from './components/WelcomePopup'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <div className="bg-white text-zinc-900 font-sans overflow-x-hidden">
         <Navbar />
         <CartDrawer />
+        <WelcomePopup />
         <main>
           <Hero />
           <Stats />
