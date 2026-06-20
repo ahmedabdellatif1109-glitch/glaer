@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ShoppingBag } from 'lucide-react'
+import { useCart } from '../context/CartContext'
 
 const links = [
   { label: 'Home', href: '#home' },
@@ -13,6 +14,7 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { totalItems, setOpen: openCart } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30)
@@ -32,13 +34,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-        {/* Logo — show as-is on white bg */}
+        {/* Logo */}
         <a href="#home" className="flex items-center group">
-          <img
-            src="/glaer-logo.webp"
-            alt="GLAER"
-            className="h-8 w-auto object-contain"
-          />
+          <img src="/glaer-logo.webp" alt="GLAER" className="h-8 w-auto object-contain" />
         </a>
 
         {/* Desktop Nav */}
@@ -55,22 +53,59 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200 shadow-md shadow-red-200"
-        >
-          Get a Quote
-        </a>
+        {/* Right side — cart + CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          {/* Cart icon */}
+          <button
+            onClick={() => openCart(true)}
+            className="relative p-2 rounded-lg hover:bg-zinc-100 text-zinc-600 hover:text-black transition-colors"
+            aria-label="Open cart"
+          >
+            <ShoppingBag size={20} />
+            <AnimatePresence>
+              {totalItems > 0 && (
+                <motion.span
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  className="absolute -top-1 -right-1 w-4 h-4 bg-red-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center"
+                >
+                  {totalItems}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-zinc-600 hover:text-black p-1.5 rounded-md transition-colors"
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200 shadow-md shadow-red-200"
+          >
+            Get a Quote
+          </a>
+        </div>
+
+        {/* Mobile right — cart + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={() => openCart(true)}
+            className="relative p-2 rounded-lg text-zinc-600 hover:text-black"
+            aria-label="Open cart"
+          >
+            <ShoppingBag size={20} />
+            {totalItems > 0 && (
+              <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                {totalItems}
+              </span>
+            )}
+          </button>
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-zinc-600 hover:text-black p-1.5 rounded-md transition-colors"
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

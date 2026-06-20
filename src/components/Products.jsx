@@ -1,5 +1,17 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check, Zap, ArrowRight } from 'lucide-react'
+import { Check, Zap, ShoppingCart } from 'lucide-react'
+import { useCart } from '../context/CartContext'
+
+// TODO: Replace with real Shopify product variant ID when wiring backend
+const GLAER_30_PRODUCT = {
+  id: 'glaer-30',
+  name: 'GLAER 30 — Complete Package',
+  variant: '30ft pole · Hybrid brush · 100ft hose',
+  price: 0, // Set real price when Shopify is connected
+  image: 'https://xeroproducts.com/cdn/shop/files/The-Best-Line-Of-Water-Fed-Poles_Large_d79a9f5f-d656-42b8-be03-315d5905094b_1280x853.jpg',
+  shopifyVariantId: null, // TODO: Add Shopify variant ID
+}
 
 const specs = [
   { label: 'Reach', value: "30'", sub: 'Full extension' },
@@ -18,6 +30,20 @@ const features = [
 ]
 
 export default function Products() {
+  const { addToCart } = useCart()
+  const [added, setAdded] = useState(false)
+
+  const handleAddToCart = () => {
+    addToCart(GLAER_30_PRODUCT)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 2000)
+  }
+
+  const handleBuyNow = () => {
+    addToCart(GLAER_30_PRODUCT)
+    // TODO: When Shopify is wired, redirect straight to checkout:
+    // window.location.href = shopifyCheckoutUrl
+  }
   return (
     <section id="products" className="relative py-28 overflow-hidden bg-zinc-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -141,17 +167,31 @@ export default function Products() {
               ))}
             </ul>
 
-            {/* CTA */}
-            <a
-              href="#contact"
-              className="group inline-flex items-center gap-2.5 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-red-200 hover:-translate-y-0.5"
-            >
-              Get a Quote
-              <ArrowRight size={17} className="group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={handleBuyNow}
+                className="group flex-1 inline-flex items-center justify-center gap-2.5 bg-black hover:bg-zinc-800 text-white font-semibold px-6 py-4 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-0.5"
+              >
+                <Zap size={17} className="text-red-400" fill="currentColor" />
+                Buy Now
+              </button>
+
+              <button
+                onClick={handleAddToCart}
+                className={`group flex-1 inline-flex items-center justify-center gap-2.5 font-semibold px-6 py-4 rounded-xl border-2 transition-all duration-200 hover:-translate-y-0.5 ${
+                  added
+                    ? 'bg-green-50 border-green-500 text-green-700'
+                    : 'bg-white border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
+                }`}
+              >
+                <ShoppingCart size={17} />
+                {added ? 'Added!' : 'Add to Cart'}
+              </button>
+            </div>
 
             <p className="text-zinc-400 text-xs mt-4">
-              Custom configurations available. Just ask.
+              Pricing set at checkout · Custom configs available — <a href="#contact" className="text-red-600 hover:underline">just ask</a>
             </p>
           </motion.div>
         </div>
