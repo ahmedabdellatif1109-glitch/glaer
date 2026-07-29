@@ -259,7 +259,7 @@ export default function Products() {
           >
             <p className="text-red-600 text-xs font-semibold tracking-widest uppercase mb-2">Poles</p>
             <h2 className="text-4xl md:text-5xl font-black text-black tracking-tight mb-4">
-              The GLAER 30
+              GLAER 30'
             </h2>
             <p className="text-zinc-500 text-lg max-w-xl">
               30 feet. 2.4 lbs. Choose what comes with it.
