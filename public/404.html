@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // GitHub Pages SPA redirect
+      // GitHub Pages SPA routing — pathSegmentsToKeep=1 for project repos (/glaer)
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 2).join('/') +
-        '/?p=/' + l.pathname.slice(1).split('/').slice(1).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.pathname.split('/').slice(0, 2).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(1).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
     </script>
