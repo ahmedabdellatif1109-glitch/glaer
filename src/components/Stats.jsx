@@ -28,7 +28,7 @@ const stats = [
   {
     value: 30,
     suffix: "'",
-    label: 'Reach',
+    label: "GLAER 30'",
     detail: 'Full extension — handles residential to light commercial',
   },
   {
