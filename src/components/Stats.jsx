@@ -39,7 +39,7 @@ const stats = [
     noCount: true,
   },
   {
-    value: 100,
+    value: 50,
     suffix: "'",
     label: 'Hose Included',
     detail: 'Supply hose in every package, ready to connect',
