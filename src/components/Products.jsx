@@ -13,7 +13,7 @@ const poleVariants = {
     label: 'GLAER Rigged',
     tagline: 'Everything you need, right out of the box.',
     badge: 'Most Popular',
-    price: 0,
+    price: 449,
     variant: '30ft pole · Hybrid brush · 50ft hose',
     image: `${BASE}wfp-action.jpg`,
     thumbnails: [
@@ -43,7 +43,7 @@ const poleVariants = {
     label: 'GLAER Unrigged',
     tagline: 'Just the pole. Bring your own setup.',
     badge: null,
-    price: 0,
+    price: 375,
     variant: '30ft pole only',
     image: `${BASE}wfp-action.jpg`,
     thumbnails: [],
@@ -363,6 +363,10 @@ export default function Products() {
                     </li>
                   ))}
                 </ul>
+                <div className="flex items-baseline gap-2 mb-5">
+                  <span className="text-4xl font-black text-black">${product.price}</span>
+                  <span className="text-zinc-400 text-sm">USD</span>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-3 mb-6">
                   <button
                     onClick={handleAddToCart}
