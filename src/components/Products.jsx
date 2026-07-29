@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Zap, ShoppingCart, Package, Wrench } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 
+const BASE = import.meta.env.BASE_URL
+
 const variants = {
   bundle: {
     id: 'glaer-30-bundle',
@@ -12,10 +14,10 @@ const variants = {
     badge: 'Most Popular',
     price: 0,
     variant: '30ft pole · Hybrid brush · 50ft hose',
-    image: 'https://xeroproducts.com/cdn/shop/files/The-Best-Line-Of-Water-Fed-Poles_Large_d79a9f5f-d656-42b8-be03-315d5905094b_1280x853.jpg',
+    image: `${BASE}wfp-action.jpg`,
     thumbnails: [
-      'https://xeroproducts.com/cdn/shop/files/Hose-Home-Page-Block-2025_1280x960.jpg',
-      'https://xeroproducts.com/cdn/shop/files/Water-Fed-Brushes-Block-Home-Page-2025_1088x816.jpg',
+      `${BASE}wfp-action.jpg`,
+      `${BASE}wfp-action.jpg`,
     ],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
@@ -42,7 +44,7 @@ const variants = {
     badge: null,
     price: 0,
     variant: '30ft pole only',
-    image: 'https://xeroproducts.com/cdn/shop/files/Water-Fed-Poles-Block-Home-Page-2025_1280x960.jpg',
+    image: `${BASE}wfp-action.jpg`,
     thumbnails: [],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },

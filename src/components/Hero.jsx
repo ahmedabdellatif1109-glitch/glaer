@@ -33,7 +33,7 @@ export default function Hero() {
       {/* Hero bg photo — very subtle */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-[0.04]"
-        style={{ backgroundImage: "url('https://xeroproducts.com/cdn/shop/files/Water-Fed-Poles-Block-Home-Page-2025_1280x960.jpg')" }}
+        style={{ backgroundImage: `url('${import.meta.env.BASE_URL}wfp-action.jpg')` }}
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
