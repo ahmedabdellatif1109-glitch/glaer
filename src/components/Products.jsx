@@ -35,7 +35,7 @@ const poleVariants = {
       'Unbox it, connect it, get to work',
     ],
     description: 'The GLAER Rigged is our complete, job-ready setup. Everything ships together — pole, hybrid brush, and 50 feet of 8mm supply hose — so you can unbox it, connect it, and start cleaning the same day.',
-    shopifyVariantId: null,
+    shopifyVariantId: '50064088465651',
   },
   unrigged: {
     id: 'glaer-30-unrigged',
@@ -61,7 +61,7 @@ const poleVariants = {
       'Same pole as the GLAER Rigged — no compromise on build',
     ],
     description: 'The bare pole on its own — no brush, no hose. 7 sections of high-modulus carbon fibre, built for cleaners who already have their setup dialled in.',
-    shopifyVariantId: null,
+    shopifyVariantId: '50064088498419',
   },
 }
 

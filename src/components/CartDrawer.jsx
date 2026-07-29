@@ -6,9 +6,13 @@ export default function CartDrawer() {
   const { items, open, setOpen, removeFromCart, updateQuantity, subtotal, clearCart } = useCart()
 
   const handleCheckout = () => {
-    // TODO: Replace with Shopify checkout URL
-    // window.location.href = shopifyCheckoutUrl
-    alert('Shopify checkout will be wired here.')
+    const lineItems = items
+      .filter(item => item.shopifyVariantId)
+      .map(item => `${item.shopifyVariantId}:${item.quantity}`)
+      .join(',')
+    if (lineItems) {
+      window.location.href = `https://1m5t1m-ux.myshopify.com/cart/${lineItems}`
+    }
   }
 
   return (
