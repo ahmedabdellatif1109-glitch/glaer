@@ -14,8 +14,11 @@ const variants = {
     badge: 'Most Popular',
     price: 0,
     variant: '30ft pole · Hybrid brush · 50ft hose',
-    image: null,
-    thumbnails: [],
+    image: `${BASE}wfp-action.jpg`,
+    thumbnails: [
+      'https://xeroproducts.com/cdn/shop/files/Hose-Home-Page-Block-2025_1280x960.jpg',
+      'https://xeroproducts.com/cdn/shop/files/Water-Fed-Brushes-Block-Home-Page-2025_1088x816.jpg',
+    ],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
       { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
@@ -41,7 +44,7 @@ const variants = {
     badge: null,
     price: 0,
     variant: '30ft pole only',
-    image: null,
+    image: `${BASE}wfp-action.jpg`,
     thumbnails: [],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
