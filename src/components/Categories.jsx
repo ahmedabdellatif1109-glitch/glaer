@@ -9,7 +9,7 @@ const categories = [
     tagline: 'Carbon fibre. Featherlight.',
     description: '30ft reach at 3.5 lbs bare — built for full days on the job without the arm burn.',
     image: `${import.meta.env.BASE_URL}wfp-action.jpg`,
-    href: '#poles',
+    href: '/products#poles',
     span: 'lg:col-span-2',
   },
   {
@@ -19,7 +19,7 @@ const categories = [
     tagline: 'Hybrid. One pass.',
     description: 'Agitates and rinses in a single stroke. Every package ships with one.',
     image: 'https://xeroproducts.com/cdn/shop/files/Water-Fed-Brushes-Block-Home-Page-2025_1088x816.jpg',
-    href: '#brushes',
+    href: '/products#brushes',
     span: 'lg:col-span-1',
   },
   {
@@ -29,7 +29,7 @@ const categories = [
     tagline: "50ft, 8mm. Ready to run.",
     description: "50ft of 8mm supply hose included in every kit — no separate order, no missing parts.",
     image: 'https://xeroproducts.com/cdn/shop/files/Hose-Home-Page-Block-2025_1280x960.jpg',
-    href: '#hoses',
+    href: '/products#hoses',
     span: 'lg:col-span-1',
   },
 ]

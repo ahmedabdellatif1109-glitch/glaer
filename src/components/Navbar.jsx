@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ShoppingBag } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'Why Us', href: '#features' },
-  { label: 'Products', href: '#products' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Why Us', href: '/#features' },
+  { label: 'Products', href: '/products' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export default function Navbar() {
@@ -35,21 +36,21 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="flex items-center group">
+        <Link to="/" className="flex items-center group">
           <img src={`${import.meta.env.BASE_URL}glaer-logo.webp`} alt="GLAER" className="h-16 w-auto object-contain" />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              to={link.href}
               className="text-sm font-medium text-zinc-500 hover:text-black transition-colors duration-200 relative group"
             >
               {link.label}
               <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-red-600 group-hover:w-full transition-all duration-300" />
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -76,12 +77,12 @@ export default function Navbar() {
             </AnimatePresence>
           </button>
 
-          <a
-            href="#contact"
+          <Link
+            to="/#contact"
             className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200 shadow-md shadow-red-200"
           >
             Get a Quote
-          </a>
+          </Link>
         </div>
 
         {/* Mobile right — cart + hamburger */}
@@ -120,22 +121,22 @@ export default function Navbar() {
           >
             <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-1">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setOpen(false)}
                   className="text-zinc-600 hover:text-black text-sm font-medium py-2.5 px-2 rounded-md hover:bg-zinc-50 transition-all"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                to="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-3 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center transition-colors"
               >
                 Get a Quote
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
