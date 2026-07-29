@@ -22,7 +22,7 @@ const variants = {
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
       { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
-      { label: 'Hose', value: "50'", sub: '8mm supply hose included' },
+      { label: 'Hose', value: "50'", sub: "50' of hose included" },
       { label: 'Brush', value: 'Hybrid', sub: 'Agitate & rinse' },
     ],
     features: [
