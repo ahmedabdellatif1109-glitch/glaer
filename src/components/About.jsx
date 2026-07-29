@@ -15,7 +15,7 @@ export default function About() {
           >
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-zinc-100 border border-zinc-200">
               <img
-                src={`${import.meta.env.BASE_URL}wfp-action.jpg`}
+                src={`${import.meta.env.BASE_URL}founder-equipment.jpg`}
                 alt="Water-fed pole in use"
                 className="absolute inset-0 w-full h-full object-cover"
               />

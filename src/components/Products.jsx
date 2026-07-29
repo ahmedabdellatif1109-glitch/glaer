@@ -14,11 +14,8 @@ const variants = {
     badge: 'Most Popular',
     price: 0,
     variant: '30ft pole · Hybrid brush · 50ft hose',
-    image: `${BASE}wfp-action.jpg`,
-    thumbnails: [
-      `${BASE}wfp-action.jpg`,
-      `${BASE}wfp-action.jpg`,
-    ],
+    image: null,
+    thumbnails: [],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
       { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
@@ -44,7 +41,7 @@ const variants = {
     badge: null,
     price: 0,
     variant: '30ft pole only',
-    image: `${BASE}wfp-action.jpg`,
+    image: null,
     thumbnails: [],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
