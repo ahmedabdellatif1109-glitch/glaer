@@ -43,7 +43,7 @@ const poleVariants = {
     label: 'GLAER Unrigged',
     tagline: 'Just the pole. Bring your own setup.',
     badge: null,
-    price: 375,
+    price: 369,
     variant: '30ft pole only',
     image: `${BASE}wfp-action.jpg`,
     thumbnails: [],
