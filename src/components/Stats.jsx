@@ -39,10 +39,10 @@ const stats = [
     noCount: true,
   },
   {
-    value: 50,
-    suffix: "'",
-    label: 'Hose Included',
-    detail: 'Supply hose in every package, ready to connect',
+    value: 7,
+    suffix: '',
+    label: 'Sections',
+    detail: 'Telescopic carbon fibre — full 30ft extension',
   },
 ]
 
