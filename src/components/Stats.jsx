@@ -62,7 +62,7 @@ export default function Stats() {
             >
               <div className="text-5xl font-black text-red-600 mb-1">
                 {stat.noCount ? (
-                  <span>2.4 lbs</span>
+                  <span>3.5 lbs</span>
                 ) : (
                   <CountUp end={stat.value} suffix={stat.suffix} />
                 )}

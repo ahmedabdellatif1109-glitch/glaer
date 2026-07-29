@@ -7,7 +7,7 @@ const categories = [
     label: '01',
     name: 'Poles',
     tagline: 'Carbon fibre. Featherlight.',
-    description: '30ft reach at 2.4 lbs bare — built for full days on the job without the arm burn.',
+    description: '30ft reach at 3.5 lbs bare — built for full days on the job without the arm burn.',
     image: `${import.meta.env.BASE_URL}wfp-action.jpg`,
     href: '#poles',
     span: 'lg:col-span-2',

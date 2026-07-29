@@ -22,7 +22,7 @@ const poleVariants = {
     ],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
-      { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
+      { label: 'Bare Weight', value: '3.5 lbs', sub: 'Pole only' },
       { label: 'Hose', value: "50'", sub: "50' of hose included" },
       { label: 'Brush', value: 'Hybrid', sub: 'Agitate & rinse' },
     ],
@@ -30,7 +30,7 @@ const poleVariants = {
       '30ft high-modulus carbon fibre pole',
       'Hybrid brush — agitates and rinses in one pass',
       "50' 8mm supply hose, ready to connect",
-      '2.4 lb bare weight — less arm fatigue on long routes',
+      '3.5 lb bare weight — less arm fatigue on long routes',
       'All fittings included, no extra purchases needed',
       'Unbox it, connect it, get to work',
     ],
@@ -49,13 +49,13 @@ const poleVariants = {
     thumbnails: [],
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
-      { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
+      { label: 'Bare Weight', value: '3.5 lbs', sub: 'Pole only' },
       { label: 'Sections', value: '7', sub: 'Telescopic carbon fibre' },
     ],
     features: [
       '30ft high-modulus carbon fibre pole',
       '7-section telescopic build for a longer, smoother reach',
-      '2.4 lb bare weight — lightest in its class',
+      '3.5 lb bare weight — lightest in its class',
       'Compatible with standard WFP fittings and brushes',
       'Ideal for cleaners with existing brush & hose setups',
       'Same pole as the GLAER Rigged — no compromise on build',
@@ -262,7 +262,7 @@ export default function Products() {
               GLAER 30'
             </h2>
             <p className="text-zinc-500 text-lg max-w-xl">
-              30 feet. 2.4 lbs. Choose what comes with it.
+              30 feet. 3.5 lbs. Choose what comes with it.
             </p>
           </motion.div>
 
