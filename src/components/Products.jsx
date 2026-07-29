@@ -10,7 +10,7 @@ const poleVariants = {
   bundle: {
     id: 'glaer-30-bundle',
     name: 'GLAER 30',
-    label: 'Pro Bundle',
+    label: 'GLAER Rigged',
     tagline: 'Everything you need, right out of the box.',
     badge: 'Most Popular',
     price: 0,
@@ -34,13 +34,13 @@ const poleVariants = {
       'All fittings included, no extra purchases needed',
       'Unbox it, connect it, get to work',
     ],
-    description: 'The Pro Bundle is our complete, job-ready setup. Everything ships together — pole, hybrid brush, and 50 feet of 8mm supply hose — so you can unbox it, connect it, and start cleaning the same day.',
+    description: 'The GLAER Rigged is our complete, job-ready setup. Everything ships together — pole, hybrid brush, and 50 feet of 8mm supply hose — so you can unbox it, connect it, and start cleaning the same day.',
     shopifyVariantId: null,
   },
   unrigged: {
     id: 'glaer-30-unrigged',
     name: 'GLAER 30',
-    label: 'Pro Unrigged',
+    label: 'GLAER Unrigged',
     tagline: 'Just the pole. Bring your own setup.',
     badge: null,
     price: 0,
@@ -50,16 +50,17 @@ const poleVariants = {
     specs: [
       { label: 'Reach', value: "30'", sub: 'Full extension' },
       { label: 'Bare Weight', value: '2.4 lbs', sub: 'Pole only' },
-      { label: 'Sections', value: '6', sub: 'Telescopic carbon fibre' },
+      { label: 'Sections', value: '7', sub: 'Telescopic carbon fibre' },
     ],
     features: [
       '30ft high-modulus carbon fibre pole',
+      '7-section telescopic build for a longer, smoother reach',
       '2.4 lb bare weight — lightest in its class',
       'Compatible with standard WFP fittings and brushes',
       'Ideal for cleaners with existing brush & hose setups',
-      'Same pole as the Pro Bundle — no compromise on build',
+      'Same pole as the GLAER Rigged — no compromise on build',
     ],
-    description: 'The bare pole on its own — no brush, no hose. Perfect for experienced window cleaners who already have a preferred setup and just want the carbon fibre pole.',
+    description: 'The bare pole on its own — no brush, no hose. 7 sections of high-modulus carbon fibre, built for cleaners who already have their setup dialled in.',
     shopifyVariantId: null,
   },
 }
@@ -83,7 +84,7 @@ const brushProducts = [
       'Fan bristles agitate glass in a single stroke',
       'Low-profile trim neck — reaches tight frames',
       'Universal thread fits any standard WFP pole',
-      'Included in the Pro Bundle',
+      'Included in the GLAER Rigged',
     ],
     description: 'The GLAER Hybrid Brush is designed to do the job in one pass. Pencil jets hit where the water needs to go, fan bristles do the agitation — no doubling back, no wasted time.',
   },
@@ -108,9 +109,9 @@ const hoseProducts = [
       'Kink-resistant construction for all-day use',
       'Quick-connect fittings on both ends',
       'Works with any standard WFP system',
-      'Included in the Pro Bundle',
+      'Included in the GLAER Rigged',
     ],
-    description: "50 feet of 8mm supply hose that comes ready to connect. No sourcing parts separately, no messing with fittings — it's included in the Pro Bundle or available on its own.",
+    description: "50 feet of 8mm supply hose that comes ready to connect. No sourcing parts separately, no messing with fittings — it's included in the GLAER Rigged or available on its own.",
   },
 ]
 
@@ -269,8 +270,8 @@ export default function Products() {
           <div className="flex mb-12">
             <div className="inline-flex bg-white border border-zinc-200 rounded-2xl p-1.5 shadow-sm gap-1">
               {[
-                { key: 'bundle', icon: Package, label: 'Pro Bundle', sub: 'Pole + Brush + Hose' },
-                { key: 'unrigged', icon: Wrench, label: 'Pro Unrigged', sub: 'Pole only' },
+                { key: 'bundle', icon: Package, label: 'GLAER Rigged', sub: 'Pole + Brush + Hose' },
+                { key: 'unrigged', icon: Wrench, label: 'GLAER Unrigged', sub: 'Pole only' },
               ].map((opt) => (
                 <button
                   key={opt.key}
@@ -307,10 +308,10 @@ export default function Products() {
             >
               {/* Image card */}
               <div className="relative flex justify-center">
-                <div className="relative w-full max-w-sm">
+                <div className="relative w-full max-w-lg">
                   <div className="relative rounded-3xl border border-zinc-200 bg-white p-8 shadow-xl overflow-hidden">
                     <div className="flex flex-col items-center gap-6">
-                      <div className="relative w-full rounded-xl overflow-hidden" style={{ height: '260px' }}>
+                      <div className="relative w-full rounded-xl overflow-hidden" style={{ height: '340px' }}>
                         <img src={product.image} alt={product.label} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
                       </div>
